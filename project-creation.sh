@@ -18,3 +18,8 @@ touch app/utils/qa_engine.py
 touch app/routes.py
 mkdir static
 mkdir templates
+
+
+touch app.py
+touch Dockerfile
+touch kubernetes-deployment.yaml

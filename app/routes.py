@@ -50,12 +50,3 @@ def index():
         answer=answer
     )
     
-
-
-
-
-        
-
-
-
-                

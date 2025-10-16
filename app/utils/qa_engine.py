@@ -2,24 +2,16 @@ import os
 import requests
 
 class QAEngine:
+
     def __init__(self):
         self.api_key = os.getenv("GROQ_API_KEY")
         self.api_url = "https://api.groq.com/openai/v1/chat/completions"
-        self.model = "meta-llama/llama-4-maverick-17b-128e-instruct"
+        self.model  = "meta-llama/llama-4-maverick-17b-128e-instruct"
 
-    
-    def ask_about_celebrity(self, name, question):
-        """
-        Ask a question about a specific celebrity using the Groq API.
-        Args:
-            name: The name of the celebrity.
-            question: The question to ask about the celebrity.
-        Returns:
-            The answer from the Groq API or None if an error occurs.
-        """
+    def ask_about_celebrity(self,name,question):
         headers = {
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {self.api_key}"
+            "Authorization" : f"Bearer {self.api_key}",
+            "Content-Type" : "application/json"
         }
 
         prompt = f"""
@@ -40,3 +32,5 @@ class QAEngine:
             return response.json()['choices'][0]['message']['content']
         
         return "Sorry I couldn't find the answer"
+
+
