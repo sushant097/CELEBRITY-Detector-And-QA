@@ -1,10 +1,6 @@
 touch .env
-# .gitignore creation and its content
+# .gitignore creation
 touch .gitignore
-echo ".env" >> .gitignore
-echo "venv/" >> .gitignore
-echo ".DS_Store" >> .gitignore
-echo "__pycache__/" >> .gitignore
 
 
 touch requirements.txt
